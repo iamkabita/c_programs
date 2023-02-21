@@ -3,7 +3,7 @@
 
 void main(){
     int i, j;
-    for(int i=1;i<=5;i++){
+    for( i=1;i<=5;i++){
         for(j=1;j <= 9; j++){
             int start = 6 - i;            
             if(j == start){
