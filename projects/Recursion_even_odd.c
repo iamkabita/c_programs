@@ -1,23 +1,21 @@
 #include<stdio.h>
 #include<conio.h>
 
-int sum(int n)
+int sumEven(int n)
 {
 	int s;
-	if(n>0)
+	if (n>0)
 	{
-		s = n + sum(n-1);
+		s = n*2 + sumEven(n-1);
 		return (s);
 	}
 }
 void main()
 {
-	int x,p;
+	int x,m;
 	printf("Enter a number\n");
 	scanf("%d",&x);
-	p = sum(x); 
-	printf("Sum of %d natural numbers is %d",x,p);
+	m = sumEven(x);
+	printf("%d",m);
 	getch();
 }
-
-
