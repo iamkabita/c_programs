@@ -1,25 +1,40 @@
 #include<stdio.h>
 #include<conio.h>
 
-int binary(int n)
+
+//  1=> 5
+//  4  2  1
+
+int btod(int binary,int times)
 {
-	int x,sum,t;
-    
-	if(n==1||n==0)
-	{
-		x = n%10;
-		sum = x*t + binary(n-1);
-		t = t*2;
-		return (sum);
+	if(binary == 0){
+		return 0;
 	}
 	
-			
+	int value; 
 	
+	if(binary % 10 == 1){
+		value = 1 * times + btod(binary/10, times*2);
+	}else{
+		value = btod(binary/10, times*2);
+	}
+	
+	return value;
+	
+		
 }
 
 void main()
 {
-	printf("%d",binary(101));
+	int binary;
+	int times = 1;
+	
+	printf("Enter binary number: ");
+	scanf("%d", &binary);
+	
+	int result = btod(binary, times);
+	
+	printf("value in decimal: %d", result);
 	
 	getch();
 }
