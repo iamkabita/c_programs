@@ -7,17 +7,16 @@ int main()
 	int n,m;
 	printf("Enter month number\n");
 	scanf("%d",&n);
-	/*m = month(n);	
-	if(m==0)
-	{
-		printf("Invalid month number");
-	}
-	else
-	{
-	   printf("It has %d days",m);
-    }*/
-    m = month2(n);
+	
+	printf("Through if condition\n");
+	m = month(n);             // function call (if condition )	  
+	printf("It has %d days",m);
+	
+	
+    printf("\n \nThrough Array\n");
+    m = month2(n);             // function call.(Array).
     printf("It has %d days",m);
+    
 	return 0;
 }
 
@@ -43,13 +42,11 @@ int month (int x)
 	return y;
 	
 }
+// Through Array.
 int month2(int x)
 {
 	int y;
 	int month[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 	y= month[x];
-	return y;
-	
-	
-	
+	return y;	
 }

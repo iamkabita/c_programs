@@ -7,6 +7,6 @@ void main()
 	int n;
 	printf("Enter Week number\n");
 	scanf("%d",&n);
-	printf(" %s is week number of %d",week[n],n);
+	printf(" %d is week number of %s",n,week[n]);
 	getch();
 }
